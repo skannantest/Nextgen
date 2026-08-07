@@ -27,7 +27,7 @@ jobs:
       with:
         name: playwright-report
         path: playwright-report/
-        retention-days: 30
+        retention-days: 10 // automatically delete the report after 10 days, you can change it to any number of days you want
 
  
 */

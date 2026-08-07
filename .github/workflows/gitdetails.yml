@@ -7,7 +7,7 @@ env:
     
 on:
   schedule:
-    - cron: '33 13 * * *' 
+    - cron: '38 13 * * *' 
 jobs:
   test:
     timeout-minutes: 60

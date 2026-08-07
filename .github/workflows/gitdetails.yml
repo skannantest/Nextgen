@@ -1,6 +1,5 @@
 name: Playwright Tests 
 env:
-
     VALID_USERNAME: ${{ secrets.VALID_USER }}
     VALID_PASSWORD: ${{ secrets.VALID_PASS }}
     INVALID_USERNAME: ${{ secrets.INVALID_USER }}

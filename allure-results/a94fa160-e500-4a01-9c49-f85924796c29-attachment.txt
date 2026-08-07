@@ -1,0 +1,5 @@
+Response Body: {
+  success: true,
+  message: 'The Degree was created successfully.',
+  degreeId: 281
+}

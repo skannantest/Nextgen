@@ -1,0 +1,6 @@
+Response Body: {
+  success: true,
+  message: 'The Degree details were updated successfully.',
+  degreeId: 278,
+  alignedProfilesCount: 0
+}

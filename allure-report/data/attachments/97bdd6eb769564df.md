@@ -1,0 +1,217 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - img "logo" [ref=e6]
+      - text: ×
+    - link "home Home Home" [disabled] [ref=e9]:
+      - img "home" [ref=e10]
+      - generic: Home
+      - generic: Home
+    - link "Engagements Engagements" [ref=e14] [cursor=pointer]:
+      - /url: /engagements
+      - img [ref=e15]
+      - generic: Engagements
+      - generic: Engagements
+    - link "Profile Profile" [disabled] [ref=e19]:
+      - img [ref=e20]
+      - generic: Profile
+      - generic: Profile
+    - link "Budget Budget" [disabled] [ref=e24]:
+      - img [ref=e25]
+      - generic: Budget
+      - generic: Budget
+    - button "Reports Reports" [ref=e29] [cursor=pointer]:
+      - img [ref=e30]
+      - generic: Reports
+      - generic: Reports
+    - link "Monitor Engagement Monitor Engagement" [ref=e34] [cursor=pointer]:
+      - /url: /monitor-engagement
+      - img [ref=e35]
+      - generic: Monitor Engagement
+      - generic: Monitor Engagement
+    - link "Global Settings Global Settings" [disabled] [ref=e39]:
+      - img [ref=e40]
+      - generic: Global Settings
+      - generic: Global Settings
+    - link "Client Settings Client Settings" [ref=e45] [cursor=pointer]:
+      - /url: /client-settings
+      - img [ref=e46]
+      - generic: Client Settings
+      - generic: Client Settings
+  - generic [ref=e49]:
+    - generic [ref=e50]:
+      - paragraph [ref=e51] [cursor=pointer]:
+        - img [ref=e53]
+      - generic [ref=e58]:
+        - log [ref=e60]
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e63]: LEO Pharma
+            - combobox [ref=e65]
+          - img [ref=e68] [cursor=pointer]
+      - generic [ref=e70]:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - log
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "LEO Pharma"
+                    - generic:
+                      - combobox
+    - generic [ref=e71]:
+      - img [ref=e73] [cursor=pointer]
+      - img [ref=e76] [cursor=pointer]
+      - generic [ref=e83] [cursor=pointer]: AS
+  - main [ref=e84]:
+    - generic [ref=e85]:
+      - img [ref=e87] [cursor=pointer]
+      - generic [ref=e89]:
+        - generic: Client Settings
+      - generic:
+        - generic:
+          - generic:
+            - img
+          - searchbox "Search" [ref=e90]
+      - generic [ref=e91]:
+        - listitem [ref=e92]:
+          - link [ref=e94] [cursor=pointer]:
+            - /url: /client-settings/functional-roles
+            - img [ref=e96]
+        - listitem [ref=e98]:
+          - link [ref=e100] [cursor=pointer]:
+            - /url: /client-settings/permissions
+            - img [ref=e102]
+        - listitem [ref=e104]:
+          - link [ref=e106] [cursor=pointer]:
+            - /url: /client-settings/permission-groups
+            - img [ref=e108]
+        - listitem [ref=e110]:
+          - link [ref=e112] [cursor=pointer]:
+            - /url: /client-settings/client-hierarchy
+            - img [ref=e114]
+        - listitem [ref=e116]:
+          - link [ref=e118] [cursor=pointer]:
+            - /url: /client-settings/child-profiles
+            - img [ref=e120]
+        - listitem [ref=e122]:
+          - link [ref=e124] [cursor=pointer]:
+            - /url: /client-settings/products
+            - img [ref=e126]
+        - listitem [ref=e128]:
+          - link [ref=e130] [cursor=pointer]:
+            - /url: /client-settings/topics
+            - img [ref=e132]
+        - listitem [ref=e134]:
+          - link [ref=e136] [cursor=pointer]:
+            - /url: /client-settings/content
+            - img [ref=e138]
+        - listitem [ref=e140]:
+          - link [ref=e142] [cursor=pointer]:
+            - /url: /client-settings/degree-specialty
+            - img [ref=e144]
+        - listitem [ref=e150]:
+          - link [ref=e152] [cursor=pointer]:
+            - /url: /client-settings/vendor
+            - img [ref=e154]
+        - listitem [ref=e156]:
+          - link [disabled] [ref=e158]:
+            - img [ref=e160]
+        - listitem [ref=e162]:
+          - img [ref=e167]
+        - listitem [ref=e169]:
+          - link [ref=e171] [cursor=pointer]:
+            - /url: /client-settings/templates/undefined
+            - img [ref=e173]
+        - listitem [ref=e175]:
+          - link [ref=e177] [cursor=pointer]:
+            - /url: /client-settings/tasks
+            - img [ref=e179]
+        - listitem [ref=e182]:
+          - link [disabled] [ref=e184]:
+            - img [ref=e186]
+        - listitem [ref=e188]:
+          - link [disabled] [ref=e190]:
+            - img [ref=e192]
+        - listitem [ref=e194]:
+          - link [ref=e196] [cursor=pointer]:
+            - /url: /client-settings/session
+            - img [ref=e198]
+    - generic [ref=e200]:
+      - generic [ref=e201]:
+        - img [ref=e202]
+        - generic [ref=e204]:
+          - heading "Topics" [level=1] [ref=e205]
+          - paragraph [ref=e206]: Add your topic
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - heading "All Topics - 0" [level=2] [ref=e209]:
+            - text: All Topics -
+            - generic [ref=e210]: "0"
+          - generic [ref=e211]:
+            - button "Filter" [ref=e214] [cursor=pointer]:
+              - img [ref=e215]
+              - text: Filter
+            - generic [ref=e219]:
+              - img
+              - textbox "Select Date Range" [ref=e220]
+            - generic [ref=e221]:
+              - generic:
+                - img
+              - searchbox "Search" [ref=e222]
+            - button "Add Topic" [ref=e223] [cursor=pointer]:
+              - img [ref=e224]
+              - text: Add Topic
+        - table [ref=e227]:
+          - rowgroup [ref=e228]:
+            - row "Topic Id Topic Name Product Name Therapeutic Area Topic Type Status Field Release Date Start Date End Date Unbranded Content Alignment Engagement Type" [ref=e229]:
+              - columnheader [ref=e230]
+              - columnheader "Topic Id" [ref=e232]:
+                - generic [ref=e234] [cursor=pointer]:
+                  - text: Topic Id
+                  - img [ref=e235]
+              - columnheader "Topic Name" [ref=e238]:
+                - generic [ref=e240] [cursor=pointer]:
+                  - text: Topic Name
+                  - img [ref=e241]
+              - columnheader "Product Name" [ref=e244]:
+                - generic [ref=e246]: Product Name
+              - columnheader "Therapeutic Area" [ref=e248]:
+                - generic [ref=e250]: Therapeutic Area
+              - columnheader "Topic Type" [ref=e252]:
+                - generic [ref=e254]: Topic Type
+              - columnheader "Status" [ref=e256]:
+                - generic [ref=e258]: Status
+              - columnheader "Field Release Date" [ref=e260]:
+                - generic [ref=e262] [cursor=pointer]:
+                  - text: Field Release Date
+                  - img [ref=e263]
+              - columnheader "Start Date" [ref=e266]:
+                - generic [ref=e268] [cursor=pointer]:
+                  - text: Start Date
+                  - img [ref=e269]
+              - columnheader "End Date" [ref=e272]:
+                - generic [ref=e274] [cursor=pointer]:
+                  - text: End Date
+                  - img [ref=e275]
+              - columnheader "Unbranded" [ref=e278]:
+                - generic [ref=e280] [cursor=pointer]:
+                  - text: Unbranded
+                  - img [ref=e281]
+              - columnheader "Content Alignment" [ref=e284]:
+                - generic [ref=e286] [cursor=pointer]:
+                  - text: Content Alignment
+                  - img [ref=e287]
+              - columnheader "Engagement Type" [ref=e290]:
+                - generic [ref=e292]: Engagement Type
+              - columnheader [ref=e294]
+          - rowgroup
+        - generic [ref=e296]:
+          - img [ref=e298]
+          - strong [ref=e333]: No results match the selected date range
+```

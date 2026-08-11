@@ -1,4 +1,4 @@
-import { test, expect, Page } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { elements } from '../../src/Elements/Elements';
 import { login } from './login';
 import { baseClass } from '../BaseFile/baseFile';

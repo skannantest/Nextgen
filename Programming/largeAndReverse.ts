@@ -1,15 +1,19 @@
 
-function largestNumber(){
+function largestNumber() {
 
-const numbers = [3, 5, 2, 8, 1];
-let largestNumber = numbers[0];
+    const numbers = [3, 5, 2, 8, 1];
 
-for (let i = 1; i < numbers.length; i++) {
-    if ( largestNumber < numbers[i]) {
-        largestNumber = numbers[i];
+    let largestNumber = numbers[0];
+    let secondLargestNumber = numbers[0];
+
+    for (let i = 1; i < numbers.length; i++) {
+
+        if (largestNumber < numbers[i]) {
+            secondLargestNumber = largestNumber; //5
+            largestNumber = numbers[i]; //8
+        }
     }
-}
-console.log(largestNumber);
+    console.log(secondLargestNumber);
 }
 largestNumber();
 

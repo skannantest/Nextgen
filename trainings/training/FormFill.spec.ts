@@ -21,10 +21,11 @@ test('Fill the form', async ({ page },testInfo) => {
 
     await page.locator('//input[@class="vfb-text  vfb-medium  required  "]').first().fill('Vinoth');
     await page.locator('//input[@class="vfb-text  vfb-medium  required  "]').last().fill('Kumar');
-    //Gender
+
     await page.getByRole('radio', { name: gender}).click();
-    //Course selection
+    
     for(let i=0; i<course.length; i++){
+
     if(course[i] === 'DevOps'){
     await page.getByRole('checkbox', { name: course[i] }).uncheck();
     }

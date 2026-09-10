@@ -1,6 +1,6 @@
 function findDuplicate(){
 
-    const name = "kanan";
+    const name = "kannan";
 
     for (let i = 0; i < name.length; i++) {
         for(let j=i+1;j<name.length;j++){

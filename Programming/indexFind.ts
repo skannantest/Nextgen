@@ -5,7 +5,7 @@ function findIndex(){
 
     for (let i = 0; i < arr.length; i++) {
       if(arr[i] === searchElement){
-        console.log(`${i}`);
+        console.log(i);
       }
     }
 }
@@ -20,7 +20,7 @@ function findIndexAlphabet(){
 
     for (let i = 0; i < name.length; i++) {
       if(name[i] === searchElement){
-        console.log(`${i}`);
+        console.log(i);
       }
     }
 }

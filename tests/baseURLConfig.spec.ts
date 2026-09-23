@@ -8,6 +8,7 @@ test.describe('Login Validation', () => {
      await page.locator('#user-name').fill('kannan');
      await page.locator('#password').fill(process.env.VALID_PASS!);
      await page.locator('#login-button').click();
+
     });
 
     test('Invalid Login with base URL configure in config file @dasbsk', async({page})=>{

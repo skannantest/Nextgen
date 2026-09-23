@@ -1,9 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { expect } from '@playwright/test';
 import { elements } from '../../src/Elements/Elements';
-import { login } from './login';
-import { baseClass } from '../BaseFile/baseFile';
+import { LoginPage } from './login';
+import { BasePage } from '../BaseFile/baseFile';
 
-export class demoSite extends baseClass{
+export class DemoSite extends BasePage {
 
     readonly fullName = elements.fullName;
     readonly appendText = elements.appendTextField;
@@ -15,31 +15,32 @@ export class demoSite extends baseClass{
         await this.page.goto(url);
     }
 
-    async enterFullName(){
-        await this.page.locator(this.fullName).fill('Kannan');
-        await expect(this.page.locator(this.fullName)).toHaveValue('Kannan');
+    async enterFullName(name: string){
+        await this.page.locator(this.fullName).fill(name);
+        await expect(this.page.locator(this.fullName)).toHaveValue(name);
     }
 
     async appendTextAndClickTab(){
-        const append = await this.page.locator(this.appendText);
+        const append = this.page.locator(this.appendText);
+        const initialValue = await append.inputValue();
         await append.click();
         await append.press('Meta+ArrowRight');
         await append.pressSequentially(' Person')
-        const value= await append.inputValue();
-        await expect(this.page.locator(this.appendText)).toHaveValue(value);
+        await expect(append).toHaveValue(`${initialValue} Person`);
     }
 
-    async getTextFromField(){
-        await this.page.waitForTimeout(3000);
-        const getValues = await this.page.locator(this.getText).inputValue();
+    async getTextFromField() {
+        const getField = this.page.locator(this.getText);
+        await expect(getField).toBeVisible();
+        const getValues = await getField.inputValue();
         console.log(getValues);
-        await expect(this.page.locator(this.getText)).toHaveValue(getValues);
+        expect(getValues).not.toBe('');
     }
 
-    async clearTextFromfield():Promise<login>{
+    async clearTextFromfield(): Promise<LoginPage> {
         await this.page.locator(this.clearText).clear();
         await expect(this.page.locator(this.clearText)).toHaveValue('');
-        return new login(this.page);
+        return new LoginPage(this.page);
     }
 
 }

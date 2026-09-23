@@ -1,38 +1,27 @@
-import { test, expect, Page, TestInfo } from '@playwright/test';
-import { demoSite } from '../src/pages/input';
-import { login } from '../src/pages/login';
-
-
-async function attachStepScreenshot(page: Page, testInfo : TestInfo , name : string){
-
-      const shot = await page.screenshot({ fullPage: true });
-      await testInfo.attach(name, {
-        body: shot,
-        contentType: 'image/png'
-      });
-    }
+import { test } from '../src/fixtures/pageFixtures';
+import { LoginPage } from '../src/pages/login';
+import { attachStepScreenshot } from '../src/utils/screenshot';
 
 test.describe('Form Filling', () => {
 
-test('Fill the form @smoke', async ({page},testInfo ) =>{
+  test('Fill the form', { tag: '@smoke' }, async ({ page, demoSite }, testInfo) => {
 
-   const form = new demoSite(page);
+    let loginPage: LoginPage;
 
-   await test.step('FullName, append and etc..', async()=>{
-    
-     await form.loadURL('demoSite');
-     await form.enterFullName();
-     await form.appendTextAndClickTab();
-     await form.getTextFromField();
-     const login = await form.clearTextFromfield(); // Stored the return value
-     await attachStepScreenshot(page,testInfo,'Screenshot taken');
+    await test.step('FullName, append and etc..', async () => {
 
-   await test.step('another method', async()=>{ // Used the stored return value here
+      await demoSite.loadURL('demoSite');
+      await demoSite.enterFullName('Kannan');
+      await demoSite.appendTextAndClickTab();
+      await demoSite.getTextFromField();
+      loginPage = await demoSite.clearTextFromfield();
+      await attachStepScreenshot(page, testInfo, 'After clearing field');
+    });
 
-     await login.enterFullName();
-     await attachStepScreenshot(page,testInfo,'Screenshot taken');
+    await test.step('Re-enter name via LoginPage', async () => { // Used the stored return value here
 
-   }); 
+      await loginPage.enterFullName('gowtham');
+      await attachStepScreenshot(page, testInfo, 'After re-entering name via LoginPage');
+    });
   });
-});
 });

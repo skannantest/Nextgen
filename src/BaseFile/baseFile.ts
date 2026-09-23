@@ -1,14 +1,16 @@
-import { test, expect, Page } from '@playwright/test';
+import { Page } from '@playwright/test';
 
 // Fixtures used to have Page, Browser, context, Request(API)
 
-export class baseClass {
+export class BasePage {
 
     page: Page; 
 
-    constructor(page: Page){
+    constructor(page: Page) {
     this.page = page;
     }
+
+    
 
     async baseURLs(url: string): Promise<string> {
     if (url === 'demoSite') {
@@ -16,6 +18,9 @@ export class baseClass {
     }
     if (url === 'ClientUAT') {
         return "https://uat-admin.expertevents.iqvia.com/";
+    }
+    if (url === 'unbounce') {
+        return "https://app.unbounce.com/";
     }
     throw new Error(`Invalid site name: ${url}`);
   }
